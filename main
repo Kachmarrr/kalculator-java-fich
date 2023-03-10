@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class calculator {
+    public static void main(String[ ] args) {
+
+        //while (){
+
+            Scanner var = new Scanner(System.in);
+            // enter data
+            System.out.println("enter first num:");
+            float num1 = var.nextFloat();
+            System.out.println("enter second num:");
+            float num2 = var.nextFloat();
+            //enter action
+            System.out.print("adding or + = 1\nsubtraction or - = 2" +
+                    "\nmultiplication or * = 3\ndivision or / = 4\n" +
+                    "Enter action \n");
+            String action = var.nextLine();
+            action = var.nextLine();
+
+            float raw;
+
+            // condition
+
+            switch (action) {
+                case "1" :
+                    raw = num1 + num2;
+                    System.out.println("answer :" + raw);
+                    break;
+                case "2" :
+                    raw = num1 - num2;
+                    System.out.println("answer :" + raw);
+                    break;
+                case "3" :
+                    raw = num1 * num2;
+                    System.out.println("answer :" + raw);
+                    break;
+                case "4" :
+                    if (num2 == 0)
+                        System.out.println("you dayn");
+                    else {
+                        raw = num1 / num2;
+                        System.out.println("answer" + raw);
+                        // lol
+                    }
+                default:
+                    System.out.println("you really doyn");
+
+        }
+    }
+}
+
